@@ -1,0 +1,130 @@
+ <div class="container-fluid mt-1">
+
+
+  <div class="row py-2 px-4">
+    <div class="col-md-12">
+      <div class="card panel mb-5">
+        <div class="card-body p-4">
+          <div class="row p-4 mb-3">
+            <div class="col-md-12">
+              <h6 class="panel-title  font-weight-bold mb-1">
+                LOGIN PAGE
+              </h6>
+            </div>
+
+          </div>
+
+          <div class="row p-4">
+            <div class="col-md-12">
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Username</label>
+                      <div class="col-md-8">
+                        <input type="text" name="username" [(ngModel)]="username" class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="Address">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Password</label>
+                      <div class="col-md-8">
+                        <input type="password" name="password" [(ngModel)]="password" class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </form>
+              <div class="row px-4 pt-4 mb-0">
+                <div class="col-md-2">
+                  <button class="btn btn-block btn-primary hover-raise" type="button" (click)='checkLogin()'>Login</button>
+                </div>
+
+                <div class="col-md-2">
+                  <button class="btn btn-block btn-primary hover-raise" type="button" (click)='register()'>Resgister</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+<!-- <div class="container-fluid mt-1">
+
+
+  <div class="row py-2 px-4">
+    <div class="col-md-12">
+      <div class="card panel mb-5">
+        <div class="card-body p-4">
+          <div class="row p-4 mb-3">
+            <div class="col-md-12">
+              <h6 class="panel-title  font-weight-bold mb-1">
+                TEST LOGIN PAGE
+              </h6>
+            </div>
+
+          </div>
+
+          <div class="row p-4">
+            <div class="col-md-12">
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Username</label>
+                      <div class="col-md-8">
+                        <input type="text" name="username" [(ngModel)]="username" class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="Address">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Password</label>
+                      <div class="col-md-8">
+                        <input type="password" name="password" [(ngModel)]="password" class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </form>
+              <div class="row px-4 pt-4 mb-0">
+                <div class="col-md-2">
+                  <button class="btn btn-block btn-primary hover-raise" type="button" (click)='isLog()'>Login</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>  -->

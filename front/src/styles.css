@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+.table tbody tr, .table th{
+    background: #ffffff;
+  }
+  
+  .table td{
+    padding: 0.8rem 0.5rem;
+    vertical-align: top;
+    border-bottom: 1px solid #efefef;
+  }
+  
+  
+  .table th{
+    padding: 1.25rem 1rem 1.25rem 1rem;
+    vertical-align: top;
+    color:#5d5d5d;
+  }
+  
+  
+  thead tr{
+    border-bottom: 1px solid #cccccc;
+  }
+  
+  
+  .table tbody tr button{
+    visibility: hidden;
+    padding: 1px 6px;
+    font-size: 13px;
+    border-radius: 5px;
+  }
+  
+  .text-bold{
+    font-weight:800;
+  }
+  
+  
+  

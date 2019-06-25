@@ -1,0 +1,118 @@
+<div class="container-fluid mt-1">
+
+
+  <div class="row py-2 px-4">
+    <div class="col-md-12">
+      <div class="card panel mb-5">
+        <div class="card-body p-4">
+          <div class="row p-4 mb-3">
+            <div class="col-md-12">
+              <h6 class="panel-title  font-weight-bold mb-1">
+                REGISTRATION FORM
+              </h6>
+            </div>
+
+          </div>
+
+          <div class="row p-4">
+            <div class="col-md-12">
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">First Name</label>
+                      <div class="col-md-8">
+                        <input type="text" [(ngModel)]='user.firstName' name='firstName' class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="first name">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label-sm">Last Name</label>
+                      <div class="col-md-8">
+                        <input type="text" [(ngModel)]='user.lastName' name='lastName' class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="last name">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Address</label>
+                      <div class="col-md-8">
+                        <input type="text" [(ngModel)]='user.address' name='address' class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="Address">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Phone Number</label>
+                      <div class="col-md-8">
+                        <input type="number" [(ngModel)]='user.phoneNumber' name='phoneNumber' class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="phone">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Email Address</label>
+                      <div class="col-md-8">
+                        <input type="email" [(ngModel)]='user.email' name='email' class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">username</label>
+                      <div class="col-md-8">
+                        <input type="text" [(ngModel)]='user.username' name='username' class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="username">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Password</label>
+                      <div class="col-md-8">
+                        <input type="password" [(ngModel)]='user.password' name='password' class="form-control form-control-sm"
+                          id="colFormLabelSm" placeholder="password">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </form>
+              <div class="row px-4 pt-4 mb-0">
+                <div class="col-md-2">
+                  <button class="btn btn-block btn-primary hover-raise" type="button" (click)='back()'>Back</button>
+                </div>
+                <div class="col-md-2">
+                  <button class="btn btn-block btn-success hover-raise" type="submit" (click)='processForms()'>Save</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
