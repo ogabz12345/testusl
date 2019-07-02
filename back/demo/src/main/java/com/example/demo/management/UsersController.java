@@ -18,13 +18,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins="http://localhost:1234",allowedHeaders="*")
+@CrossOrigin(origins="http://localhost:2345",allowedHeaders="*")
 public class UsersController {
 
 	@Autowired
 	private UsersService userService;
 	
-	//private JavaMailSender javaMailSender;
+	private JavaMailSender javaMailSender;
+	
+	@Autowired
+	public UsersController(JavaMailSender javaMailSender) {
+		this.javaMailSender = javaMailSender;
+	}
+	
 	
 	@GetMapping("/users")
 	public List<Users> findAll(){
@@ -51,18 +57,15 @@ public class UsersController {
 	@PostMapping("/user")
 	public Users save(@RequestBody Users countries) {
 		//create an email instance
-//		SimpleMailMessage mailMessage = new SimpleMailMessage();
-//		String email = countries.getEmail();
-//		String password = countries.getPassword();
-//		Users user = userService.save(countries);
-//		
-//		mailMessage.setFrom("spring.mail.username");
-//		mailMessage.setTo(email);
-//		mailMessage.setSubject("THIS IS YOUR PASSWORD");
-//		mailMessage.setText("Password := "+ password);
-//		System.out.println("klskjskjshjshsh"+mailMessage);
 		
-			//	javaMailSender.send(mailMessage);
+		SimpleMailMessage mailMessage = new SimpleMailMessage();
+		String email = countries.getEmail();
+		String password = countries.getPassword();		
+		mailMessage.setFrom("spring.mail.username");
+		mailMessage.setTo(email);
+		mailMessage.setSubject("THIS IS YOUR PASSWORD");
+		mailMessage.setText("Password := "+ password);		
+				javaMailSender.send(mailMessage);
 				return userService.save(countries);
 			
 		

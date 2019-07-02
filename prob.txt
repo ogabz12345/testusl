@@ -3,5 +3,6 @@ USER MANAGEMENT
 2)I was able to save the usernmae and password in the db and crosscheck with the db is the username and password is corect for authentication.
 3)i was able to successfully call the users from the database and display in the front-end of the application.
 4)user can successfully logout and login, i used canActivate for the route
-5)you can activate and deactivate user.
+5)I was able to send the password of the user to his/her email address.
+6)you can activate and deactivate user.
 
