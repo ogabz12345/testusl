@@ -1,6 +1,7 @@
 package com.example.demo.management;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,8 @@ public interface UsersService {
 	
 	public Users save(Users entity);
 	
+	public Users register(Users entity);
+	
 	public void delete(long id);
 	
 	public Users update(Users entity);
@@ -22,5 +25,6 @@ public interface UsersService {
 	
 	public boolean isExist(String username,String password);
 	
-
+	public Optional<Users> findByUserName(String username);
+	
 }

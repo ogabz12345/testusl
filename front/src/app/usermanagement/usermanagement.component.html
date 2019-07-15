@@ -1,28 +1,19 @@
 <div class="container-fluid mt-1">
-
-
   <div class="row py-2 px-4">
     <div class="col-md-12">
-      <div class="card panel mb-5">
+      <div class="card panel mb-5 mt-5" style="background-color: #f5f5f5;">
         <div class="card-body p-4">
           <div class="row p-4 mb-3">
             <div class="col-md-12">
-              <h6 class="panel-title  font-weight-bold mb-1">
+              <h2 class="panel-title text-bold mb-1">
                 Our Users
-              </h6>
-              <p class="subtitle mb-0">This is a list showing all our users</p>
+              </h2>
             </div>
-
-          </div>
-          <div class="row px-4 pt-4 mb-0">
-            <!-- <div class="col-md-2">
-              <button class="btn btn-block btn-primary hover-raise" (click)='newUser()'>New User</button>
-            </div> -->
 
           </div>
           <div class="row p-4">
             <div class="col-md-12">
-              <table class="table alt-table table-borderless">
+              <table id="myTable" class="table table-striped"  style="top: 20px; box-shadow: 4px 6px 6px 0 rgba(0, 0, 0, 0.061);">
                 <thead>
                   <th scope="col">first Name</th>
                   <th scope="col">last Name</th>
@@ -34,6 +25,7 @@
                   <th scope="col">Action</th>
                 </thead>
                 <tbody>
+                  <!-- <tr *ngFor="let gb of user"  (click)="set(gb)" [class.active]="selectedArea == gb"> -->
 
                   <tr *ngFor="let gb of user">
                     <td>{{gb.firstName}}</td>
@@ -44,13 +36,12 @@
                     <td> {{gb.active}}
                     </td>
                     <td>
-                      <a (click)='editUser(gb)'>
+                      <a (click)='editUser(gb)' id="btnEdit" class="pr-3">
                         <i class="fa fa-pencil" aria-hidden="true"></i>
                       </a>
+                        <a (click)='deleteUser(gb)' id="btnDelete"><i class="fa fa-trash-o"></i></a>
                     </td>
-                    <td>
-                      <a (click)='deleteUser(gb)'><i class="fa fa-trash-o"></i></a>
-                    </td>
+                   
                   </tr>
                 </tbody>
               </table>

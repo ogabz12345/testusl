@@ -11,24 +11,26 @@ import { Usermanagementclass } from '../usermanagementclass';
 export class RegistrationformComponent implements OnInit {
 
   private user: Usermanagementclass = new Usermanagementclass();
-  
+
   constructor(private router: Router, private userManagement: UsermanagementserviceService) { }
 
   ngOnInit() {
 
   }
 
-  processForms(){
+  processForms() {
     this.user.active = true;
-      this.userManagement.createUser(this.user).subscribe((data)=>{
-        console.log(data);
-      }, (error)=>{
-        console.log(error)
-      })
-      this.router.navigate(["/login"]);
-    }
+    
+    this.userManagement.registerUser(this.user).subscribe((data) => {
+      console.log(data);
+    }, (error) => {
+      return window.alert("This username has been used, please use another username");  
+      console.log(error)
+    })
+    this.router.navigate(["/login"]);
+  }
 
-    back(){
-      this.router.navigate(["/login"]);
-    }
+  back() {
+    this.router.navigate(["/login"]);
+  }
 }

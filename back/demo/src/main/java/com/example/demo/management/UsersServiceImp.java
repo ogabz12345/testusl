@@ -1,6 +1,7 @@
 package com.example.demo.management;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,10 +55,27 @@ public class UsersServiceImp implements UsersService {
 				userRepository.findByUsername(username).get().isActive()) {
 			isOkay = true;
 		}
-		System.out.println("++++++++++++++second"+username+"____"+password);
-		System.out.println("++++++++++++++isokay" + isOkay);
+		
+		
 		return isOkay;
 	}
+
+	@Override
+	public Users register(Users entity) {
+		// TODO Auto-generated method stub
+		return userRepository.save(entity);
+	}
+
+	@Override
+	public Optional<Users> findByUserName(String username) {
+		// TODO Auto-generated method stub
+		return userRepository.findByUsername(username);
+	}
+	
+	
+	
+	
+	
 
 
 }

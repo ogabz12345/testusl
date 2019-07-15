@@ -11,6 +11,7 @@ import { Usermanagementclass } from './usermanagementclass';
 export class UsermanagementComponent implements OnInit {
 
   private user: UsermanagementComponent[];
+  selectedArea;
 
 
   constructor(private router: Router, private userManagement: UsermanagementserviceService) { }
@@ -47,10 +48,15 @@ export class UsermanagementComponent implements OnInit {
   deleteUser(user){
     return this.userManagement.deleteUser(user.id).subscribe((data)=>{
       this.user.splice(this.user.indexOf(user), 1);
+      this.ngOnInit();
       (error)=>{
         console.log(error);
       }
     })
+  }
+
+  set(p) {
+    this.selectedArea = p;
   }
 
 }

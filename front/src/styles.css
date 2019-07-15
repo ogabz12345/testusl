@@ -2,18 +2,15 @@
 .table tbody tr, .table th{
     background: #ffffff;
   }
-  
-  .table td{
-    padding: 0.8rem 0.5rem;
-    vertical-align: top;
-    border-bottom: 1px solid #efefef;
-  }
-  
-  
-  .table th{
+ 
+  /* .table th{
     padding: 1.25rem 1rem 1.25rem 1rem;
     vertical-align: top;
     color:#5d5d5d;
+  } */
+
+  .table thead th{
+    font-size: 13px;
   }
   
   
@@ -35,3 +32,11 @@
   
   
   
+
+  .table td, .table th {
+    padding: .5rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    font-size: 12px;
+    font-weight: bold;
+}

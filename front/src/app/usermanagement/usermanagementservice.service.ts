@@ -7,7 +7,7 @@ import { Usermanagementclass } from './usermanagementclass';
   providedIn: 'root'
 })
 export class UsermanagementserviceService {
-  private baseUrl: string = "http://localhost:6070/api";
+  private baseUrl: string = "http://localhost:8090/api";
   private usermanagement: Usermanagementclass;
   
   constructor(private http: HttpClient) { }
@@ -28,6 +28,16 @@ export class UsermanagementserviceService {
     return this.http.post(this.baseUrl + '/user', user)
   }
 
+  registerUser(user: Usermanagementclass){
+    console.log("user"+user.address)
+    return this.http.post(this.baseUrl+'/register',user)
+  }
+
+  // createUserForm(user: Usermanagementclass, username: String) {
+  //   console.log("user"+user+"EEEEEEEEEEEEEEEEEEEEEEE"+username)
+  //   return this.http.post(this.baseUrl + '/user', {entity : user, userna :username})
+  // }
+
   editUser(user) {
     return this.http.put(this.baseUrl + '/user', user)
   }
@@ -43,4 +53,18 @@ export class UsermanagementserviceService {
   getter() {
     return this.usermanagement;
   }
+
+  // createUser(user: Usermanagementclass, file: File[]) {
+  //   let formData  = new FormData();
+  //   formData.append('contact', new Blob([JSON.stringify(user)], {type: 'applicatiojn/json'}));
+  //   if(file != undefined){
+  //     if(file.length>0 || file.length == null){
+  //       for (let i = 0; i < file.length; i++){
+  //         formData.append('file', file[i]);
+  //       }
+  //     }
+  //   }
+  //   const header = new HttpHeaders().delete('Content-Type');
+  //   return this.http.post(this.baseUrl + '/user', formData, {headers: header});
+  // }
 }

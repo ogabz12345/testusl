@@ -1,0 +1,22 @@
+#myTable tr.active td {
+    background-color: #c7cfd3 !important;
+    color: white;
+  }
+
+  #btnDelete{
+    color: indianred;
+    cursor: pointer;
+  }
+
+  #btnDelete:hover{
+    color: red
+  }
+
+  #btnEdit:hover{
+    color: blue;
+  }
+
+#btnEdit{
+  color: dodgerblue;
+  cursor: pointer;
+}

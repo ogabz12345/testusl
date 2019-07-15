@@ -1,0 +1,10 @@
+#navBar{
+    background-color: #4c9acd;
+}
+
+.navbar-nav li{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

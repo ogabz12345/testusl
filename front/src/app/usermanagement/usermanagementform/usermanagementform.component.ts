@@ -34,10 +34,8 @@ export class UsermanagementformComponent implements OnInit {
     }
     else{
       this.userManagement.editUser(this.user).subscribe((data)=>{
-        
         console.log(data);
         this.ngOnInit();
-
       },(error)=>{
         console.log(error)
       })
