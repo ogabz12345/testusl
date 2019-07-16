@@ -21,22 +21,21 @@
                   <th scope="col">Phone Number</th>
                   <th scope="col">Email</th>
                   <th scope="col">Activation</th>
-
-                  <th scope="col">Action</th>
+                  <th scope="col"></th>
                 </thead>
                 <tbody>
                   <!-- <tr *ngFor="let gb of user"  (click)="set(gb)" [class.active]="selectedArea == gb"> -->
-
+                    <!-- <i class="fa fa-check" aria-hidden="true"></i> -->
+                    <!-- <i class="fa fa-ban" aria-hidden="true"></i> -->
                   <tr *ngFor="let gb of user">
                     <td>{{gb.firstName}}</td>
                     <td>{{gb.lastName}}</td>
                     <td>{{gb.address}}</td>
                     <td>{{gb.phoneNumber}}</td>
                     <td>{{gb.email}}</td>
-                    <td> {{gb.active}}
-                    </td>
+                    <td><i class="fa fa-check" *ngIf="gb.active" aria-hidden="true"></i><i class="fa fa-ban" *ngIf="!gb.active" aria-hidden="true"></i> </td>
                     <td>
-                      <a (click)='editUser(gb)' id="btnEdit" class="pr-3">
+                      <a (click)='editUser(gb)' id="btnEdit" class="pr-4">
                         <i class="fa fa-pencil" aria-hidden="true"></i>
                       </a>
                         <a (click)='deleteUser(gb)' id="btnDelete"><i class="fa fa-trash-o"></i></a>

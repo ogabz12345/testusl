@@ -18,13 +18,20 @@
     border-bottom: 1px solid #cccccc;
   }
   
-  
-  .table tbody tr button{
+  .table tbody tr a{
+    visibility: hidden;
+    background: transparent;
+  }
+  .table tbody tr:hover a{
+    visibility: visible;
+  }
+
+  /* .table tbody tr button{
     visibility: hidden;
     padding: 1px 6px;
     font-size: 13px;
     border-radius: 5px;
-  }
+  } */
   
   .text-bold{
     font-weight:800;

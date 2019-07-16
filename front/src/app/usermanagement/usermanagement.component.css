@@ -20,3 +20,11 @@
   color: dodgerblue;
   cursor: pointer;
 }
+
+.fa-check{
+  color: green;
+}
+
+.fa-ban{
+  color: red;
+}
