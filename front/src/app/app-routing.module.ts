@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthGaurdServiceService } from './auth-gaurd-service.service';
 import { RegistrationformComponent } from './usermanagement/registrationform/registrationform.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {path: '', component:LoginComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'users', component:UsermanagementComponent,canActivate:[AuthGaurdServiceService]},
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegistrationformComponent},
+  {path: 'resetpassword/activateuser/:navItem', component:ResetPasswordComponent},
   {path:'logout', component: LogoutComponent,canActivate:[AuthGaurdServiceService]}
 ];
 

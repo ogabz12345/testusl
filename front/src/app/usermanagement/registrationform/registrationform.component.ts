@@ -24,8 +24,8 @@ export class RegistrationformComponent implements OnInit {
     this.userManagement.registerUser(this.user).subscribe((data) => {
       console.log(data);
     }, (error) => {
-      return window.alert("This username has been used, please use another username");  
       console.log(error)
+      return window.alert("This username or email address has been used, please use another username and email address");  
     })
     this.router.navigate(["/login"]);
   }

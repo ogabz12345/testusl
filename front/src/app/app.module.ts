@@ -9,7 +9,8 @@ import { UsermanagementComponent } from './usermanagement/usermanagement.compone
 import { UsermanagementformComponent } from './usermanagement/usermanagementform/usermanagementform.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-import { RegistrationformComponent } from './usermanagement/registrationform/registrationform.component'
+import { RegistrationformComponent } from './usermanagement/registrationform/registrationform.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegistrationformComponent } from './usermanagement/registrationform/reg
     UsermanagementformComponent,
     LoginComponent,
     LogoutComponent,
-    RegistrationformComponent
+    RegistrationformComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

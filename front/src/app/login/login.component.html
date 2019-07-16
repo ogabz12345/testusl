@@ -1,4 +1,4 @@
- <!-- <div class="container-fluid mt-1">
+<!-- <div class="container-fluid mt-1">
 
 
   <div class="row py-2 px-4">
@@ -67,8 +67,39 @@
 
 
 
-<body>
-  <div class="container">
+<div class="container" *ngIf="view == 0">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+          <form class="form-signin">
+            <div class="form-label-group">
+              <input type="text" id="inputEmail" name="username" [(ngModel)]="username" placeholder="username" class="form-control">
+            </div>
+
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" name="password" [(ngModel)]="password" placeholder="password"
+                class="form-control">
+            </div>
+            <a (click)="forgetPass()" style="color: blue; cursor: pointer;">forgot Password</a>
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+            </div>
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)='checkLogin()' type="submit">Sign
+              in</button>
+            <hr class="my-4">
+            <button class="btn btn-outline-primary btn-block" type="button" (click)='register()'>Register</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" *ngIf="view == 1">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5">
@@ -76,24 +107,17 @@
             <h5 class="card-title text-center">Sign In</h5>
             <form class="form-signin">
               <div class="form-label-group">
-                <input type="text" id="inputEmail" name="username" [(ngModel)]="username" placeholder="username" class="form-control">
+                <input type="email" id="inputEmail" name="username" [(ngModel)]="email" placeholder="email" class="form-control">
               </div>
-
-              <div class="form-label-group">
-                <input type="password" id="inputPassword" name="password" [(ngModel)]="password" placeholder="password" class="form-control">
-              </div>
-
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-              </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)='checkLogin()' type="submit">Sign in</button>
+  
+             
               <hr class="my-4">
-              <button class="btn btn-outline-primary btn-block" type="button" (click)='register()'>Register</button>
-
+              <button class="btn btn-outline-primary btn-block" type="button" (click)='sendMail()'>Send Email</button>
+              <button class="btn btn-primary btn-block" type="button" (click)='back()'>Back</button>
+              
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-</body>

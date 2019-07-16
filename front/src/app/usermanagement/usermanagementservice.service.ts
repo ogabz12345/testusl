@@ -33,6 +33,14 @@ export class UsermanagementserviceService {
     return this.http.post(this.baseUrl+'/register',user)
   }
 
+  forgotPassword(email){
+    return this.http.post(this.baseUrl + '/forgotPass', email)
+  }
+
+  changePassword(resetEmail: string){
+   return this.http.post(this.baseUrl+'/changePassword',resetEmail)
+  }
+
   // createUserForm(user: Usermanagementclass, username: String) {
   //   console.log("user"+user+"EEEEEEEEEEEEEEEEEEEEEEE"+username)
   //   return this.http.post(this.baseUrl + '/user', {entity : user, userna :username})

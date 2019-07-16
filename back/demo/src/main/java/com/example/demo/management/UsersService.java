@@ -21,10 +21,12 @@ public interface UsersService {
 	
 	public Users update(Users entity);
 	
-	public long Count();
+	public long Count(); 
 	
 	public boolean isExist(String username,String password);
 	
 	public Optional<Users> findByUserName(String username);
-	
+
+	public Optional<Users> findByEmail(String email);
+
 }

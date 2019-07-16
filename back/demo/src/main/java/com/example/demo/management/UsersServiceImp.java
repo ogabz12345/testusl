@@ -71,6 +71,12 @@ public class UsersServiceImp implements UsersService {
 		// TODO Auto-generated method stub
 		return userRepository.findByUsername(username);
 	}
+
+	@Override
+	public Optional<Users> findByEmail(String email) {
+		// TODO Auto-generated method stub
+		return userRepository.findByEmail(email);
+	}
 	
 	
 	
