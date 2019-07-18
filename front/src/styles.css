@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+   background: #adadff!important;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif!important;
+} 
+
+
+/* 
 .table tbody tr, .table th{
     background: #ffffff;
-  }
+  } */
  
   /* .table th{
     padding: 1.25rem 1rem 1.25rem 1rem;

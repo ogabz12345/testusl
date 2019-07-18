@@ -1,7 +1,17 @@
-#myTable tr.active td {
+/* #myTable tr.active td {
     background-color: #c7cfd3 !important;
     color: white;
+  } */
+
+  table thead{
+    border-bottom: 1px solid black
   }
+
+  .card{
+    background: none!important;
+    border: none!important;
+  }
+
 
   #btnDelete{
     color: indianred;

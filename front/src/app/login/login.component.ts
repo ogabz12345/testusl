@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticateserviceService } from '../authenticateservice.service';
 import { UsermanagementserviceService } from '../usermanagement/usermanagementservice.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,9 @@ export class LoginComponent implements OnInit {
   view: number;
   email: String;
 
-  constructor(private router: Router, private loginservice: AuthenticateserviceService, private serv: UsermanagementserviceService) { }
+  constructor(
+    private toast:ToastrService,
+    private router: Router, private loginservice: AuthenticateserviceService, private serv: UsermanagementserviceService) { }
 
   ngOnInit() {
     this.view = 0
@@ -47,11 +50,11 @@ export class LoginComponent implements OnInit {
   sendMail() {
     this.serv.forgotPassword(this.email).subscribe(data => {
       console.log(data);
+      this.toast.success('check mail for password reset link','MAILED!!!');
     },(error)=>{
+      this.toast.error('Something went wrong...','ERROR!!!');
       console.log(error)
     })
-
-    window.alert("Please Check your email address for the password reset link. Thank you.");
     this.view=0;
 
   }

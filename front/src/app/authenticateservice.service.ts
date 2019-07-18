@@ -3,6 +3,7 @@ import { UsermanagementserviceService } from './usermanagement/usermanagementser
 import { Usermanagementclass } from './usermanagement/usermanagementclass';
 import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +11,18 @@ import { Router } from '@angular/router';
 export class AuthenticateserviceService {
 
 
-  constructor(private serv: UsermanagementserviceService, private router:Router) { }
+  constructor(private serv: UsermanagementserviceService, private router:Router,private toast:ToastrService) { }
 
   authenticate(username, password) {
     this.serv.isLogin(username, password).subscribe((data) => {
       if(data){
-        sessionStorage.setItem('username', username)
-        console.log("Working or not 1")
+        sessionStorage.setItem('username', username);
+        this.toast.success('successfully login','LOGIN!!!');
         this.router.navigate(['/users'])        
       } else {
-         return window.alert("Invalid Login Credentials or Account Disabled (Contact The IT Support Team)");  
+        return  this.toast.error('please put a valid username and password...','ERROR!!!'); 
       }console.log(!!data);
     });
-    console.log("Working or not 2")
     
     return sessionStorage.getItem('username') == username;
   }
@@ -34,7 +34,8 @@ export class AuthenticateserviceService {
   }
 
   logOut() {
-    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('username');
+    this.toast.success('successfully logged out','LOGGED OUT!!!'); 
   }
 
 }

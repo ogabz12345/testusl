@@ -7,7 +7,7 @@ import { Usermanagementclass } from './usermanagementclass';
   providedIn: 'root'
 })
 export class UsermanagementserviceService {
-  private baseUrl: string = "http://localhost:8090/api";
+  private baseUrl: string = "http://localhost:8070/api";
   private usermanagement: Usermanagementclass;
   
   constructor(private http: HttpClient) { }

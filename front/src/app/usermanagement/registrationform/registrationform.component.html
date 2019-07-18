@@ -8,7 +8,7 @@
           <div class="row p-4 mb-3">
             <div class="col-md-12">
               <h2 class="panel-title text-bold mb-1">
-                REGISTRATION FORM
+                Registration Form
               </h2>
 
             </div>
@@ -24,7 +24,7 @@
                       <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">First Name</label>
                       <div class="col-md-8">
                         <input type="text" [(ngModel)]='user.firstName' name='firstName' class="form-control form-control-sm"
-                          id="colFormLabelSm" placeholder="first name">
+                          id="colFormLabelSm" >
                       </div>
                     </div>
                   </div>
@@ -33,7 +33,7 @@
                       <label for="colFormLabelSm" class="col-md-4 col-form-label-sm">Last Name</label>
                       <div class="col-md-8">
                         <input type="text" [(ngModel)]='user.lastName' name='lastName' class="form-control form-control-sm"
-                          id="colFormLabelSm" placeholder="last name">
+                          id="colFormLabelSm" >
                       </div>
                     </div>
                   </div>
@@ -44,7 +44,7 @@
                       <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Address</label>
                       <div class="col-md-8">
                         <input type="text" [(ngModel)]='user.address' name='address' class="form-control form-control-sm"
-                          id="colFormLabelSm" placeholder="Address">
+                          id="colFormLabelSm" >
                       </div>
                     </div>
                   </div>
@@ -54,31 +54,20 @@
                       <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Phone Number</label>
                       <div class="col-md-8">
                         <input type="number" [(ngModel)]='user.phoneNumber' name='phoneNumber' class="form-control form-control-sm"
-                          id="colFormLabelSm" placeholder="phone">
+                          id="colFormLabelSm" >
                       </div>
                     </div>
                   </div>
                 </div>
 
+               
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">
-                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Email Address</label>
-                      <div class="col-md-8">
-                        <input type="email" [(ngModel)]='user.email' name='email' class="form-control form-control-sm"
-                          id="colFormLabelSm" placeholder="email">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group row">
-                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">username</label>
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Username</label>
                       <div class="col-md-8">
                         <input type="text" [(ngModel)]='user.username' name='username' class="form-control form-control-sm"
-                          id="colFormLabelSm" placeholder="username">
+                          id="colFormLabelSm" >
                       </div>
                     </div>
                   </div>
@@ -88,7 +77,19 @@
                       <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Password</label>
                       <div class="col-md-8">
                         <input type="password" [(ngModel)]='user.password' name='password' class="form-control form-control-sm"
-                          id="colFormLabelSm" placeholder="password">
+                          id="colFormLabelSm" >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label for="colFormLabelSm" class="col-md-4 col-form-label col-form-label-sm">Email </label>
+                      <div class="col-md-8">
+                        <input type="email" [(ngModel)]='user.email' name='email' class="form-control form-control-sm"
+                          id="colFormLabelSm" >
                       </div>
                     </div>
                   </div>
@@ -97,14 +98,15 @@
 
 
 
+
               </form>
               <div class="row p-3">
                 <div class="col-md-8"></div>
-                <div class="col-md-2 text-right"><button class="btn btn-outline-primary btn-block" (click)='back()'
+                <div class="col-md-2 text-right"><button class="btn  btn-block btn-outline-primary" (click)='back()'
                     type="button">Back</button>
                 </div>
                 <div class="col-md-2 text-right">
-                  <button class="btn btn-primary btn-block" type="submit" (click)='processForms()'>Save</button>
+                  <button class="btn btn-block btn-primary " type="submit" (click)='processForms()'>Save</button>
                 </div>
               </div>
 

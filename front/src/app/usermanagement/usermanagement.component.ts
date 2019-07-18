@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsermanagementserviceService } from './usermanagementservice.service';
 import { Usermanagementclass } from './usermanagementclass';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-usermanagement',
@@ -14,7 +15,9 @@ export class UsermanagementComponent implements OnInit {
   selectedArea;
 
 
-  constructor(private router: Router, private userManagement: UsermanagementserviceService) { }
+  constructor(
+    private toast:ToastrService,
+    private router: Router, private userManagement: UsermanagementserviceService) { }
 
   ngOnInit() {
     this.getAllUsers();
@@ -46,10 +49,13 @@ export class UsermanagementComponent implements OnInit {
 
   // DELETE A USER
   deleteUser(user){
-    return this.userManagement.deleteUser(user.id).subscribe((data)=>{
+    if(!confirm(`Are you sure you want to delete ${user.firstName}`))return;
+     this.userManagement.deleteUser(user.id).subscribe((data)=>{
       this.user.splice(this.user.indexOf(user), 1);
+      this.toast.error(`${user.firstName} was deleted.`,'DELETED!!!')
       this.ngOnInit();
       (error)=>{
+        this.toast.error('An error occurred while deleting.','ERROR!!!')
         console.log(error);
       }
     })
